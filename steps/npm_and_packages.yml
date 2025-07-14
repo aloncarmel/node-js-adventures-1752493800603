@@ -1,0 +1,26 @@
+id: npm_and_packages
+learningObjectives:
+  - Understand npm and package management in Node.js.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: npm, or Node Package Manager, is your go-to tool for managing Node.js
+              packages.
+          - text: With thousands of open-source packages, npm helps you handle dependencies
+              seamlessly.
+          - text: For a thorough understanding, visit the [npm
+              documentation](https://docs.npmjs.com/).
+          - text: Once you feel ready to handle these packages, let me know and we'll
+              proceed to some practice questions.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

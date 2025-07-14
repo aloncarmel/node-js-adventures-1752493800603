@@ -1,0 +1,27 @@
+id: nodejs_architecture
+learningObjectives:
+  - Learn about Node.js architecture and event loop.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Node.js operates on a single-threaded model with an event loop, leveraging
+              non-blocking IO calls.
+          - text: The event loop allows Node.js to perform non-blocking operations, making
+              it highly scalable.
+          - text: Understanding the event loop is key - it's what enables Node.js to manage
+              numerous connections simultaneously.
+          - text: Need more insight? Check out this [explanation of the event
+              loop](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/).
+          - text: Let me know when you're all set to proceed further.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

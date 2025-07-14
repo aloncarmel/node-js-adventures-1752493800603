@@ -1,0 +1,26 @@
+id: nodejs_server_creation
+learningObjectives:
+  - Create a basic HTTP server in Node.js.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Let's fire up our server! In Node.js, you can create an HTTP server using
+              just a few lines of code.
+          - text: Here's a simple [guide for creating a
+              server](https://nodejs.dev/learn/the-nodejs-http-module).
+          - text: The HTTP server module is as simple as it is powerful, allowing for
+              dynamic content delivery.
+          - text: Once you're feeling confident about the basics, we'll move on to managing
+              modules.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

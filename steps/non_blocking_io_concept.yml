@@ -1,0 +1,57 @@
+id: non_blocking_io_concept
+learningObjectives:
+  - Understand the concept of non-blocking I/O and its benefits.
+hints:
+  - Think about efficiency under heavy loads.
+  - Consider how multiple connections are managed.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: What is one primary benefit of Node.js's non-blocking I/O paradigm?
+    - actionId: quiz_message
+      name: quiz
+      params:
+        person: lucca
+        options:
+          - Improved rendering of web pages.
+          - Handling multiple connections simultaneously.
+          - Faster rendering of CSS.
+trigger:
+  type: chat_form_submitted
+  flowNode:
+    switch:
+      key: ${formSubmission}
+      cases:
+        A:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Try again. Non-blocking I/O is more about managing multiple requests
+                      efficiently.
+            - actionId: replay_action
+              params:
+                actionName: quiz
+        B:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Correct! Non-blocking I/O allows Node.js to manage numerous connections
+                      efficiently.
+            - actionId: finish_step
+        C:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Not quite. Non-blocking I/O mainly impacts server efficiency.
+            - actionId: replay_action
+              params:
+                actionName: quiz

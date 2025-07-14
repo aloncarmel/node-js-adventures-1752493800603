@@ -1,0 +1,26 @@
+id: async_operations_in_nodejs
+learningObjectives:
+  - Learn how to manage asynchronous operations in Node.js.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Are you prepared for the wild world of async operations? Node.js is known
+              for its fantastic async capabilities.
+          - text: Using callbacks, promises, and async/await can handle asynchronous actions
+              smoothly.
+          - text: To deepen your understanding, how about visiting this [guide on
+              asynchronous programming in
+              JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous)?
+          - text: Let me know when you're ready to handle async like a pro.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

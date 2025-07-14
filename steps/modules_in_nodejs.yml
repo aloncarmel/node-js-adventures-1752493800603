@@ -1,0 +1,26 @@
+id: modules_in_nodejs
+learningObjectives:
+  - Understand modules in Node.js and how to use them.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: In Node.js, modularity is a superpower. Modules let you encapsulate and
+              reuse code efficiently.
+          - text: Node.js provides a rich standard library, accessible through its built-in
+              modules.
+          - text: Want to explore more? Check [Node.js modules
+              docs](https://nodejs.org/api/modules.html).
+          - text: Prepared for some fun with modules? Let's continue when you've absorbed
+              this.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

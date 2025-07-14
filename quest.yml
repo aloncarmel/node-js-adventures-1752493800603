@@ -1,15 +1,10 @@
 id: nodejs_adventures
 title: Node.js Adventures
 subtitle: Unleash the power of server-side JavaScript
-description: >-
-  Embark on an exciting journey into the land of Node.js, where JavaScript steps
-  beyond the browser to power the server-side of your applications. In this
-  quest, you will explore the architecture and features that make Node.js a
-  unique and powerful runtime environment.
-
+description: |-
+  Embark on an exciting journey into the land of Node.js, where JavaScript steps beyond the browser to power the server-side of your applications. In this quest, you will explore the architecture and features that make Node.js a unique and powerful runtime environment.
 
   Learn about its non-blocking I/O paradigm and event-driven architecture that allows for high scalability and efficiency. We'll delve into creating your own server, understanding modules, and managing asynchronous operations. You'll also gain insights into using npm, the extensive package ecosystem, to enhance your projects.
-
 
   By the end of this quest, you will have the skills to build and deploy server-side applications with Node.js, making your journey in web development both holistic and thrilling. Get ready to transform your JavaScript skills and take them onto the server with confidence!
 level: intermediate

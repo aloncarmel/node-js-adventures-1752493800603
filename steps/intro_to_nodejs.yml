@@ -1,0 +1,27 @@
+id: intro_to_nodejs
+learningObjectives:
+  - Understand the fundamentals of Node.js.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Welcome to our Node.js journey! Here JavaScript breaks free of browsers
+              and powers servers.
+          - text: Node.js is built on Chrome's V8 JavaScript engine, providing a lightweight
+              and efficient way to execute code.
+          - text: Think of Node.js as your server-side Swiss Army knife - capable of
+              handling numerous tasks using non-blocking I/O.
+          - text: Its event-driven architecture allows it to support thousands of
+              connections simultaneously.
+          - text: Ready to dive deeper? Let's continue when you're ready.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

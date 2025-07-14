@@ -1,0 +1,34 @@
+id: nodejs_application_deployment
+learningObjectives:
+  - Learn about deploying Node.js applications.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Deploying Node.js applications involves some nuances, but it's quite
+              manageable once you're familiar.
+          - text: You can deploy Node.js apps using various platforms like Heroku, AWS, or
+              even your own server.
+          - text: Curious about deployment? This [guide on deploying Node.js
+              apps](https://nodejs.dev/learn/deploying-your-nodejs-app-on-the-web)
+              can help.
+          - text: Once you're ready with your deployment arsenal, we'll conclude our quest.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: Congratulations, you've completed the quest! You've journeyed through the
+                basics of Node.js and gained insights that will serve you in
+                your development endeavors. Go forth and build amazing
+                applications!
+      - actionId: finish_step
